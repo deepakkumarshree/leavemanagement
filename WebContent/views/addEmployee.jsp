@@ -10,7 +10,7 @@
  </head>
  <body>
   <h2>Add Employee Data</h2>
-  <form:form method="POST" action="/leavemanagement/save" modelAttribute="userForm" commandName="empBean">
+  <form:form method="POST" action="/leavemanagement/save" modelAttribute="userForm" >
       <table>
       
        <tr>
@@ -21,7 +21,7 @@
        <tr>
            <td><form:label path="firstname">Employee first Name:</form:label></td>
            <td><form:input path="firstname" value="${employee.firstname}"/></td>
-            <td align="left"><form:errors path="firstname" cssClass="error"/></td>
+            <td align="left"><form:errors path="firstname" class="control-label"/></td>
        </tr>
        <tr>
            <td><form:label path="middlename">Employee middle Name:</form:label></td>
@@ -30,6 +30,7 @@
        <tr>
            <td><form:label path="lastname">Employee last Name:</form:label></td>
            <td><form:input path="lastname" value="${employee.lastname}"/></td>
+           <td align="left"><form:errors path="firstname" class="control-label"/></td>
        </tr>
        <tr>
            <td><form:label path="mailId">Employee Email ID:</form:label></td>

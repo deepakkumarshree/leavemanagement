@@ -44,6 +44,7 @@ public class Employee implements Serializable  {
 	  @Column(name="userdetailsid")
 	  private Integer userdetailsid;
 	  
+	  @NotEmpty
 	  @Column(name="firstname")
 	  private String firstname;
 	  

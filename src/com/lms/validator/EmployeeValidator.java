@@ -23,13 +23,13 @@ public class EmployeeValidator implements Validator{
         if (employee.getMobile()!=null && (employee.getMobile().length() < 10 || employee.getMobile().length() > 10)) {
             errors.rejectValue("mobile", "mobile.error");
         }
-        if (employeeService.getEmployee(employee.getId())!= null) {
-            errors.rejectValue("id", "diff.userform.id");
+        if ( employee.getId()!=null && employeeService.getEmployee(employee.getId())!= null) {
+            errors.rejectValue("id", "diff.userForm.id");
         }
-        /*if(employee.getFirstname()==null)
+       if(employee.getLastname().isEmpty())
         {
-        	errors.rejectValue("firstname", "id.error");
-        }*/
+        	errors.rejectValue("lastname", "empty.userForm.lastname");
+        }
         
     }
 

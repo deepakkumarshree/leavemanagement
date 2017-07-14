@@ -44,11 +44,12 @@
 	
 	<bean id="messageSource"
         class="org.springframework.context.support.ResourceBundleMessageSource">
- 
-        <property name="basename" >
+        
+        <property name="basenames" >
                     
-                <value>classpath:message</value>
-           
+             <list>
+      <value>validation</value>
+  </list>
         </property>
         
  
