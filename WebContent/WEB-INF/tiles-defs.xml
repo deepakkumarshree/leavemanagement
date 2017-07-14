@@ -23,6 +23,10 @@
 			</definition>
 			<definition name="saveemp" template="/views/EmpModification.jsp">
 			</definition>
+			<definition name="home" template="/views/HomePage.jsp">
+			</definition>
+			<definition name="leavetype" template="/views/master/LeaveType.jsp">
+			</definition>
 			
 			
 	      </tiles-definitions>
