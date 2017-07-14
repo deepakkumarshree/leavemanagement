@@ -8,6 +8,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotEmpty;
 
 
 @Entity
@@ -21,9 +24,10 @@ public class Employee implements Serializable  {
 	private static final long serialVersionUID = 5037668165157295879L;
 
 	@Id
-	  @GeneratedValue(strategy=GenerationType.AUTO)
+	@NotNull
 	  @Column(name="id")
-	  private int id;
+	  private Integer id;
+	
 	 
 	  @Column(name="loginname")
 	  private String loginName;
@@ -85,12 +89,12 @@ public class Employee implements Serializable  {
 	  @Column(name="supervisor")
 	  private String supervisor;
 	  
-	  public int getId()
+	  public Integer getId()
 	  {
 	    return this.id;
 	  }
 	  
-	  public void setId(int id)
+	  public void setId(Integer id)
 	  {
 	    this.id = id;
 	  }

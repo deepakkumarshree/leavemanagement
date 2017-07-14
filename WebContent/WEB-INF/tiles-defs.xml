@@ -19,6 +19,10 @@
 			
 			<definition name="login" template="/views/LoginPage.jsp">
 			</definition>
+			<definition name="addemp" template="/views/addEmployee.jsp">
+			</definition>
+			<definition name="saveemp" template="/views/EmpModification.jsp">
+			</definition>
 			
 			
 	      </tiles-definitions>
